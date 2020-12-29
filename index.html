@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>cafe ニャン</title>
+
+
+    <style type="text/css">
+        #photo {
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            text-align: left;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #photo img {
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var setImg = '#photo';
+            var fadeSpeed = 1600;
+            var switchDelay = 5000;
+
+            $(setImg).children('img').css({ opacity: '0' });
+            $(setImg + ' img:first').stop().animate({ opacity: '1', zIndex: '20' }, fadeSpeed);
+
+            setInterval(function () {
+                $(setImg + ' :first-child').animate({ opacity: '0' }, fadeSpeed).next('img').animate({ opacity: '1' }, fadeSpeed).end().appendTo(setImg);
+            }, switchDelay);
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="header">
+            <a class="logo" href="#">
+                <h1><span>猫</span>カフェ</h1>
+                <h2>cafeニャン</h2>
+            </a>
+            <div class="logo-info">
+                <i class="fas fa-phone"> 052-222-2222</i>
+                <div class="time">
+                    <div class="time-left">
+                        <h3>営業時間</h3>
+                    </div>
+                    <div class="time-right">
+                        <p>平日 13:00~20:00</p>
+                        <p>土•日•祝 12:00~20:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="nav">
+            <ul>
+                <li><a class="current" href="#">ホーム</a></li>
+                <li><a href="#shop-system">料金システム</a></li>
+                <li><a href="#container">ねこスタッフ</a></li>
+                <li><a href="about.html">お店紹介</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </div>
+
+        <div id="main">
+            <div id="photo">
+                <img src="img/1.jpg" width="500" height="300" alt="">
+                <img src="img/2.jpg" width="500" height="300" alt="">
+                <img src="img/3.jpg" width="500" height="300" alt="">
+                <img src="img/4.jpg" width="500" height="300" alt="">
+                <img src="img/5.jpg" width="500" height="300" alt="">
+                <img src="img/6.jpg" width="500" height="300" alt="">
+                <img src="img/7.jpg" width="500" height="300" alt="">
+                <img src="img/8.jpg" width="500" height="300" alt="">
+            </div>
+            <div class="photo-info">
+                <h1>~~ cafeニャン ~~</h1>
+                <p>名古屋駅で癒しの猫カフェ</p>
+                <p>かわいいニャンコたちがあなたを優しく出迎えてくれます。</p>
+            </div>
+        </div>
+
+        <div id="shop-system">
+            <div class="content">
+                <h2>料金システム (フリードリンク制)</h2>
+                <table>
+                    <tr>
+                        <th></th><th>３０分</th><th>６０分</th><th>１２０分</th><th>１８０分</th><th>〜３０分毎</th>
+                    </tr>
+                    <tr>
+                        <td>平日</td><td>700en</td><td>1000en</td><td>1800en</td><td>2500en</td><td>300en</td>
+                    </tr>
+                    <tr>
+                        <td>土日祝</td><td>800en</td><td>1200en</td><td>2000en</td><td>2700en</td><td>350en</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td colspan="3">ニャンコ専用おやつ</td><td></td><td colspan="2">500en</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="container">
+            <div class="c-left">
+                <h2>ニャンコ専用ホテル</h2>
+                <table>
+                    <tr>
+                        <th></th><th><p>シングル</p><p>ケージ</p></th><th><p>ラージ</p><p>ケージ</p></th>
+                    </tr>
+                    <tr>
+                        <th>１泊２日</th><th>３２００en</th><th>４８００en</th>
+                    </tr>
+                    <tr>
+                        <th>２泊３日</th><th>５８００en</th><th>８０００en</th>
+                    </tr>
+                    <tr>
+                        <th>３泊４日</th><th>８５００en</th><th>１２０００en</th>
+                    </tr>
+                </table>
+                <img src="img/sleeping.jpg" alt="">
+            </div>
+            <div class="c-right">
+                <h2><a href="#">ねこスタッフ</a></h2>
+                <div class="neko-staff">
+                    <img src="/img2/1.jpg" alt="">
+                    <img src="/img2/2.jpg" alt="">
+                    <img src="/img2/3.jpg" alt="">
+                    <img src="/img2/4.jpg" alt="">
+                    <img src="/img2/5.jpg" alt="">
+                    <img src="/img2/6.jpg" alt="">
+                    <img src="/img2/7.jpg" alt="">
+                    <img src="/img2/8.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div id="event">
+            <div class="content">
+                <h2>
+                    <i class="fas fa-paw"></i>
+                    イベント
+                    <i class="fas fa-paw"></i>
+                </h2>
+                <h3>１２月２４日・２５日</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum saepe asperiores quos quo earum in nulla nisi consequuntur deleniti obcaecati, quam esse libero accusantium deserunt itaque magnam aut aspernatur natus!</p>
+                <h3>１２月３０日〜１月３日</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti rerum repellendus nisi et soluta deserunt eos. Eligendi eaque, hic nobis ducimus maiores ipsam soluta! Obcaecati autem cum enim iure beatae.</p>
+                <h3>１月４日・５日</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nemo vel corrupti iure reprehenderit labore aut, placeat, unde iusto, distinctio culpa accusantium beatae? At recusandae numquam tempore incidunt vero ducimus?</p>
+                <h3>１月６日から</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nemo vel corrupti iure reprehenderit labore aut, placeat, unde iusto, distinctio culpa accusantium beatae? At recusandae numquam tempore incidunt vero ducimus?</p>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>Copyright © 2018-2020  All Rights Reserved.</p>
+                </div>
+                <div class="social">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                    <i class="fab fa-twitter fa-2x"></i>
+                    <i class="fab fa-youtube fa-2x"></i>
+                    <i class="fab fa-instagram fa-2x"></i>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+        <div id="page_top"><a href="#"></a></div>
+    </div>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"liveServer.settings.multiRootWorkspaceName": "Hotel_websiteオリジナル",
+		"compile-hero.disable-compile-files-on-did-save-code": false
+	}
+}
